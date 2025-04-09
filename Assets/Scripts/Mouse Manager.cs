@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class MouseManager : MonoBehaviour
 {
@@ -52,5 +54,6 @@ public class MouseManager : MonoBehaviour
         {
             currentSlot.inventoryManager.ClearInventorySlot(currentSlot);
         }
+        
     }
 }
