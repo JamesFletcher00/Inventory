@@ -21,19 +21,27 @@ public class UISlotHandler : MonoBehaviour, IPointerClickHandler
         }
         MouseManager.instance.UpdateHeldItem(this);
     }
-    void Start()
-    {
-        if (item != null)
+    void itemStorage(){
+       if (item != null)
         {
             item = item.Clone();
             icon.sprite = item.itemIcon;
-            itemCountText.text = item.itemCount.ToString();
+            if (item.maxStack > 1){
+                itemCountText.text = item.itemCount.ToString();
+            }
+            else{
+                itemCountText.text = string.Empty;
+            }
         }
         else
         {
             icon.gameObject.SetActive(false);
             itemCountText.text = string.Empty;
-        }
+        }        
+    }
+    void Start()
+    {
+        itemStorage();   
     }
 
 }

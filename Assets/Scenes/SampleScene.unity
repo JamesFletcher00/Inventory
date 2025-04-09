@@ -2791,7 +2791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29bd363b387fdd49ad55aa5061070b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: fdf9037d556b3b04887e62062eba363a, type: 2}
   icon: {fileID: 1895830702}
   itemCountText: {fileID: 1121355852}
   inventoryManager: {fileID: 1336908113}

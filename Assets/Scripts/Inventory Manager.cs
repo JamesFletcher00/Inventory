@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+
     public void StackInInventory(UISlotHandler currentSlot, Item item)
     {
         currentSlot.item.itemCount += item.itemCount;
@@ -12,7 +13,12 @@ public class InventoryManager : MonoBehaviour
     {
         currentSlot.item = item;
         currentSlot.icon.sprite = item.itemIcon;
-        currentSlot.itemCountText.text = item.itemCount.ToString();
+            if (item.maxStack > 1){
+                currentSlot.itemCountText.text = item.itemCount.ToString();
+            }
+            else{
+                currentSlot.itemCountText.text = string.Empty;
+            }
         currentSlot.icon.gameObject.SetActive(true);
     }
 
